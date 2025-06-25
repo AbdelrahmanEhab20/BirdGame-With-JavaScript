@@ -6,10 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Road+Rage:regular" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Teko:wght@700&display=swap"
+    rel="stylesheet">
 
-  <style>
+  <!-- <style>
     body {
       background: rgb(139, 223, 252);
+      font-family: 'Comic Neue', 'Teko', Arial, sans-serif;
     }
 
     h1 {
@@ -26,17 +32,19 @@
       display: block;
       margin: 0 auto;
     }
-  </style>
+  </style> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>AbdoBirdGame | JS-Project</title>
 </head>
 
 <body>
-  <h1>Abdo-Bird-Game</h1>
-  <!-- ******Html Code******* -->
+  <h1 class="game-title">Abdo-Bird-Game</h1>
   <canvas id="bird" width="320" height="480"></canvas>
-
-  <!-- ******Script******* -->
+  <div id="scoreboard">
+    <span id="current-score">0</span>
+    <span id="best-score">Best: 0</span>
+  </div>
   <script src="game.js"></script>
 </body>
 

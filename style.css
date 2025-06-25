@@ -1,0 +1,148 @@
+/* Modern, clean look for Abdo Bird Game */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Comic Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #b2f0ff 0%, #e0e7ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+h1,
+.game-title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Comic Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 2px;
+  /* letter-spacing: 2px; */
+  font-weight: 700;
+  color: #222;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+canvas#bird {
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+  background: #b2f0ff;
+  margin-bottom: 0;
+  display: block;
+  width: 320px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  max-width: 320px;
+  margin: 0px auto 20px auto;
+  font-size: 1.5rem;
+  font-family: "Comic Neue", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  padding: 12px 20px 12px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#current-score {
+  font-weight: 700;
+  color: #0d6efd;
+  font-family: "Teko", "Comic Neue", Arial, sans-serif;
+  font-size: 2rem;
+}
+
+#best-score {
+  font-weight: 700;
+  color: #ffc107;
+  font-family: "Teko", "Comic Neue", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+#game-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 18px 48px;
+  font-size: 2rem;
+  font-family: "Teko", Arial, sans-serif;
+  background: linear-gradient(90deg, #00b4d8 0%, #48cae4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.97;
+}
+#game-btn:hover,
+#game-btn:focus {
+  background: linear-gradient(90deg, #0096c7 0%, #00b4d8 100%);
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.game-title {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 500px) {
+  canvas#bird,
+  #scoreboard {
+    width: 320px;
+    max-width: 320px;
+    min-width: 0;
+    font-size: 1rem;
+  }
+  #scoreboard {
+    padding: 8px 6px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+  .game-title {
+    font-size: 1.3rem;
+    padding: 10px 0 6px 0;
+  }
+  #game-btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+  }
+}
